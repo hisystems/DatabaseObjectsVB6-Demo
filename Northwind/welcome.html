@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="default.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1><strong>Welcome to the DatabaseObjects demonstration</strong><br>
+</h1>
+<p>This program provides some examples of the different ways the Database
+  Objects (DBO) library can be used. Currently,
+  the
+  DBO
+  library
+  can
+  successfully connect to SQL Server and Microsoft Access databases. If you would
+  like me to add another database feel free to send me an email - <a href="mailto:toby.wicks@hisystems.com.au">toby.wicks@hisystems.com.au</a>.
+  By default the
+  program will connect to the <strong>C:\Program Files\Microsoft Visual Studio\VB98\nwind.mdb </strong>  database.
+  The nwind.mdb database is available at the Microsoft website <a href="http://www.microsoft.com/downloads/details.aspx?FamilyID=C6661372-8DBE-422B-8676-C632D66C529C&displaylang=EN" target="_blank">here</a> should
+  you need it. If you would like to test with SQL
+  Server uncomment
+  the
+  NorthWindDB.Connect_SQLServer
+  function in frmMain and change the database server if necessary. Or to test
+  with MySQL extract the mysql version of the northwind database from <a href="../../../data/mysql_northwind.zip">data/mysql_northwind.zip</a> into
+  the data directory and uncomment the NorthWindDB.Connect_MySQL function in
+  frmMain. To
+  view all of the SQL statements that are being executed, turn on
+  the DebugSQL compilation
+  option in the DBO project.</p>
+<h3><br>
+  1. View Suppliers</h3>
+<p>Demonstrates some of the DBO basics, including adding, editing
+  and deleting a list of suppliers. It also demonstrates maintaing referential
+  integrity by not allowing  suppliers to be deleted if they are referenced
+  by a product. This particular feature is implemented in the Supplier.IsDeletable
+  property.</p>
+<h3><br>
+  2. View Products </h3>
+<p>Demonstrates the use of the IDatabaseObjects_Subset
+  function in the Products class. IDatabaseObjects_Subset allows the Products
+  class to either contain ALL of the products in the database or only contain
+  the products for a particular category.</p>
+<h3><br>
+  3. View an Order</h3>
+<p>Demonstrates an implementation for a <em>header </em>and
+  associated<em> detail</em> table. In this example, with the Orders and OrderDetails
+  tables.</p>
+<h3><br>
+  4. Search Products</h3>
+<p>Demonstrates how to implement the IDatabaseObjects_Search
+function in the Products class.</p>
+<h3><br>
+  5. Search Products (Extended)</h3>
+<p>Demonstrates a more complex set of search criteria as opposed
+  to the simple search demonstrated in the 'Search Products' window.
+  It also demonstrates joining tables (in this case the Products table
+  and
+  the Supplier table) to optimise the loading speed of the products, in addition
+  to demonstrating how to load a
+Product and Supplier object from the same database record.</p>
+</body>
+</html>

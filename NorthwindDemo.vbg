@@ -1,0 +1,4 @@
+VBGROUP 5.0
+StartupProject=Northwind\Northwind.vbp
+Project=NorthwindDB\NorthwindDB.vbp
+Project=..\DatabaseObjectsVB6\dbo.vbp
